@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Layout} from '../../components/layout';
+import {Layout, FooterPortal} from '../../components/layout';
 import { Input } from '../../components/inputs';
 
 class AddAddress extends Component {
@@ -31,6 +31,11 @@ class AddAddress extends Component {
                 <div className='container'>
                     <Input label='Town' />
                 </div>
+
+                <FooterPortal>
+                    <button className='secondary' onClick={() => this.props.history.goBack()}> Back </button>
+                    <button className='primary orange' onClick={() => this.props.history.push('/activity/confirm')}> Next </button>
+                </FooterPortal>
             </Layout>
         )
     }

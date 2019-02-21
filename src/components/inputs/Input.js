@@ -10,6 +10,7 @@ export default class Input extends PureComponent {
 
         this._onChange.bind(this);
     }
+
     _onChange = (event) => {
         const value = event.target.value;
         this.setState({inputValue: value})
@@ -22,7 +23,7 @@ export default class Input extends PureComponent {
 
         return(
             <div className={`input-container ${className !== undefined ? className : ''}`}>
-                { label && <label>{label} <span>{!required &&  'Optional'}</span></label>}
+                { label && <label htmlFor={name}>{label} <span>{!required &&  'Optional'}</span></label>}
                 { description && <div className='description'>{description}</div>}
                 <input type='text' name={name} value={inputValue} placeholder={placeholder}
                     onChange={this._onChange} />
