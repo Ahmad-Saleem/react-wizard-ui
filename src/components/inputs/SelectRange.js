@@ -13,7 +13,7 @@ export default class SelectRange extends PureComponent {
 
                 <div className='select-range'>
                     <select type='text' name={name[0]} >
-                    <option value="" disabled selected>{placeholder[0]}</option>
+                    <option value="" disabled defaultValue>{placeholder[0]}</option>
                     {
                         from && from.map((item, index) => 
                             <option key={index} value={item.value}>{item.label}</option>
@@ -21,7 +21,7 @@ export default class SelectRange extends PureComponent {
                     }
                     </select>
                     <select  type='text' name={name[1]}>
-                    <option value="" disabled selected>{placeholder[1]}</option>
+                    <option value="" disabled defaultValue>{placeholder[1]}</option>
                     {
                         to && to.map((item, index) => 
                             <option key={index} value={item.value}>{item.label}</option>

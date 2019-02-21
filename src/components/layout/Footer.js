@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Footer = ({children}) => <footer>
-    <div>{children}</div>
+const Footer = (props) => <footer>
+    <div>{props.children}</div>
 </footer>
 
 export default Footer;

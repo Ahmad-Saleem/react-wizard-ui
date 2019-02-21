@@ -1,4 +1,9 @@
-import AddActivity from './AddActivity'
-import AddAddress from './AddAddress'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export { AddActivity, AddAddress }
+const Activity = () => <div>
+    <h1>Activity Page</h1>
+    <Link to='/activity/add'>Add New Activity</Link>
+</div>
+
+export default Activity;

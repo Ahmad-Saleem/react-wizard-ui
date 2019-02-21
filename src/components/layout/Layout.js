@@ -1,16 +1,17 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import {withRouter} from 'react-router-dom';
 
-const Layout = ({children}) => <div className='layout'>
+const Layout = (props) => <div className='layout'>
     <Header />
     <div className='layout-body'>
-        {children}
+        {props.children}
     </div>
     <Footer>
-        <button className='secondary'> Back </button>
-        <button className='primary orange'> Next </button>
+        <button className='secondary' onClick={() => props.history.goBack()}> Back </button>
+        <button className='primary orange' onClick={() => props.history.push('/activity/address/add')}> Next </button>
     </Footer>
 </div>
 
-export default Layout;
+export default withRouter(Layout);
