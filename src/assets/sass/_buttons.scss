@@ -1,0 +1,34 @@
+button {
+	border-radius: 4px;
+    font-size: 14px;	
+    font-weight: 500;	
+    letter-spacing: -0.32px;	
+    line-height: 24px;
+    padding: 7px 0;
+    margin: 4px;
+    border: none;
+    
+    &.primary {
+	    width: 176px;
+        font-size: 16px;	
+    }
+
+    &.blue {
+        background-color: $primary-color;
+        color: #FFFFFF;
+    }
+
+    &.orange {
+        background-color: $secondary-color;
+        color: #FFFFFF;
+    }
+
+    &.secondary {
+            width: 88px;
+            border: 1px solid rgba(171,185,194,0.32);
+    }
+
+    &.w200{
+        width: 200px !important;
+    }
+}

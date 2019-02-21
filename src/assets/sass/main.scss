@@ -1,0 +1,45 @@
+@import 'reset';
+@import 'fonts';
+@import 'colors';
+@import 'layout';
+@import 'inputs';
+@import 'buttons';
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: $text-gray-dark;
+    background-color: $bg-gray;
+    font-size: 14px;
+    font-family: 'SF Pro Text', 'Courier New', Courier, monospace;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $laptop){
+        position: relative;
+    }
+}
+a {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "SF Pro Display";
+    color: $text-gray-dark;
+}
+h1 {
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 0.33px;	
+        line-height: 29px;	
+        text-align: center;
+        padding: 10px;
+}
