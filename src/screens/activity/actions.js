@@ -36,10 +36,12 @@ export const copyAddressFromExistingActivity = () => {
     
         dispatch(requestStart(COPY_ADDRESS_FROM_EXISTING_ACTIVITY));
 
-        const request = axios.get(`http://files.hoop.co.uk/addresses.json`);
+        const request = axios.get(`http://stepx.me/addresses.json`, {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        });
         
         return request.then(
-            result => dispatch(requestSuccess(COPY_ADDRESS_FROM_EXISTING_ACTIVITY, result)),
+            result => dispatch(requestSuccess(COPY_ADDRESS_FROM_EXISTING_ACTIVITY, result.data)),
             error => dispatch(requestFaild(COPY_ADDRESS_FROM_EXISTING_ACTIVITY, error))
         );
     }

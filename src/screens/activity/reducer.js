@@ -1,9 +1,10 @@
-import { ADD_ACTIVITY, ADD_ADDRESS } from './actions';
+import { ADD_ACTIVITY, ADD_ADDRESS, COPY_ADDRESS_FROM_EXISTING_ACTIVITY } from './actions';
 
 
 const initialState = {
     activity: null,
     address: null,
+    addressHistory: null,
 }
 
 const activityReducer = (state = initialState, action) => {
@@ -22,6 +23,14 @@ const activityReducer = (state = initialState, action) => {
                 address: {
                     ...action.payload
                 },
+            }
+        }
+        case COPY_ADDRESS_FROM_EXISTING_ACTIVITY: {
+            return {
+                ...state,
+                addressHistory: {
+                    ...action.payload
+                }
             }
         }
         default:

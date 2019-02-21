@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import logo from '../../assets/images/logo.png';
 
 const Header = ({children}) => <header>
     <div className='logo'>
-        logo
+        <img src={logo} className='logo' alt='Logo' />
     </div>
     <nav>
         <div className='organiser-name'>

@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'fonts';
 @import 'colors';
 @import 'layout';
 @import 'inputs';
@@ -9,6 +10,7 @@ body {
     color: $text-gray-dark;
     background-color: $bg-gray;
     font-size: 14px;
+    font-family: 'SF Pro Text', 'Courier New', Courier, monospace;
 }
 
 #root {
@@ -30,10 +32,10 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6 {
+    font-family: "SF Pro Display";
     color: $text-gray-dark;
 }
 h1 {
-        font-family: "SF Pro Display";
         font-size: 24px;
         font-weight: bold;
         letter-spacing: 0.33px;	
