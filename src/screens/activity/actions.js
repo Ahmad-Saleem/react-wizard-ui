@@ -36,9 +36,15 @@ export const copyAddressFromExistingActivity = () => {
     
         dispatch(requestStart(COPY_ADDRESS_FROM_EXISTING_ACTIVITY));
 
-        const request = axios.get(`http://stepx.me/addresses.json`, {
-            headers: {'Access-Control-Allow-Origin': '*'}
-        });
+        const request = axios(
+            {
+                method: 'get',
+                url: 'http://stepx.me/addresses.json',
+                headers: {
+                    'Accept': '*/*', 
+                }
+            }
+        );
         
         return request.then(
             result => dispatch(requestSuccess(COPY_ADDRESS_FROM_EXISTING_ACTIVITY, result.data)),
