@@ -108,14 +108,16 @@ class AddAddress extends Component {
     
         const { 
             placeName, postcode, buildingUnit, buildingName, 
-            streetNumber, streetName, town, validations } = this.state;
+            streetNumber, streetName, town, validations, addressHistory } = this.state;
         
         return(
             <Layout>
                 <div className='container'>
                     <h1>About The Address</h1>
                     <button className='blue w200' 
-                        onClick={this.copyActivityAddress.bind(this)}> 
+                        onClick={this.copyActivityAddress.bind(this)}
+                        disabled={addressHistory.status === 'pendding'}
+                    > 
                         Copy from existing activity 
                     </button>
                 </div>
