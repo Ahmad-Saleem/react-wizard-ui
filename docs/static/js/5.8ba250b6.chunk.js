@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{88:function(t,e,n){"use strict";n.r(e);var a=n(0),i=n.n(a),o=n(24);e.default=function(){return i.a.createElement("div",null,i.a.createElement("h1",null,"Confirmation"),i.a.createElement(o.b,{to:"/activity/id"},"Go to activity page"))}}}]);
+//# sourceMappingURL=5.8ba250b6.chunk.js.map
