@@ -6,7 +6,6 @@
 @import 'buttons';
 
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     color: $text-gray-dark;
     background-color: $bg-gray;
     font-size: 14px;
@@ -32,7 +31,7 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: "SF Pro Display";
+    font-family: "SF Pro Display", 'Courier New', Courier, monospace;
     color: $text-gray-dark;
 }
 h1 {
